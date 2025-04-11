@@ -56,14 +56,8 @@ public class main {
                     System.out.println("Your total interest over " + years + " years is : $"+ totalInterest);
                     System.out.println("Do you want to use the other calculators? (1 - Yes, 2 - No):");
                     userStart = scanner.nextInt();
-                    if(userStart == 1)
+                    if(userStart == 2)
                     {
-                        started = true;
-
-                    }
-                    else if(userStart == 2)
-                    {
-                        started = false;
                         System.out.println("Thanks for using our calculator!");
                         break;
                     }
@@ -73,14 +67,8 @@ public class main {
                 {
                     System.out.println("Do you want to use the other calculators? (1 - Yes, 2 - No):");
                     userStart = scanner.nextInt();
-                    if(userStart == 1)
+                    if(userStart == 2)
                     {
-                        started = true;
-
-                    }
-                    else if(userStart == 2)
-                    {
-                        started = false;
                         System.out.println("Thanks for using our calculator!");
                         break;
                     }
@@ -94,14 +82,14 @@ public class main {
             else if(command == 2)
             {
                 //needs deposit,interest rate and # of years from user
-                System.out.println("Welcome to the determing future value calculator!");
-                System.out.println("Please enter your deposit amount");
+                System.out.println("Welcome to the determining future value calculator!");
+                System.out.println("Enter your deposit amount:");
                 double deposit = scanner.nextDouble();
 
-                System.out.println("Please enter your interest rate in decimal form. (ex. 1.75% = 0.0175)");
+                System.out.println("Enter your interest rate in decimal form (ex. 1.75% = 0.0175):");
                 double interestRate = scanner.nextDouble();
 
-                System.out.println("Please enter how many years");
+                System.out.println("Enter how many years");
                 double years = scanner.nextDouble();
 
                 //math
@@ -110,17 +98,13 @@ public class main {
 
 
                 //displaying results, then asking if user wants to continue
-                System.out.println("It will be worth " + futureVal + "$ after "+ years + ".");
+                System.out.println("It will be worth $" + futureVal + " after "+ years + " years.");
                 System.out.println("Do you want to use the other calculators? (1 - Yes, 2 - No):");
                 userStart = scanner.nextInt();
-                if(userStart == 1)
-                {
-                    started = true;
-
-                }
-                else
+                if(userStart == 2)
                 {
                     System.out.println("Thanks for using our calculator!");
+                    break;
                 }
             }
             //calculator 3 - Determine present value
@@ -141,24 +125,20 @@ public class main {
                 double totalFunds = desiredMoney * (topCalc / botCalc);
                 totalFunds = Math.round(totalFunds * 100.0)/100.0;
                 //The amount you will need to invest
-                System.out.println("You will need to invest: $" + totalFunds + " today in order to earn " + desiredMoney + " monthly.");
-                System.out.print("Thanks for using our calculator!");
+                System.out.println("You will need to invest: $" + totalFunds + " today in order to earn $" + desiredMoney + " monthly.");
+                System.out.println("Do you want to use the other calculators? (1 - Yes, 2 - No):");
+                userStart = scanner.nextInt();
+                if(userStart == 2)
+                {
+                    System.out.println("Thanks for using our calculator!");
+                    break;
+                }
             }
             else
             {
                 System.out.println("Try again, pleas enter a number or there was an error with input");
             }
-//            System.out.println("Do you want to use the other calculators? (1 - Yes, 2 - No):");
-//            userStart = scanner.nextInt();
-//            if(userStart == 1)
-//            {
-//                started = true;
-//
-//            }
-//            else
-//            {
-//                System.out.println("Okay, bye!");
-//            }
+
         }
     }
 
