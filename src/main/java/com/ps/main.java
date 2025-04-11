@@ -16,7 +16,7 @@ public class main {
         {
             System.out.println("Okay, bye!");
         }
-        while(started = true)
+        while(started == true)
         {
             System.out.println("Welcome to Financial Calculator created by: Kenny Lin");
             System.out.println("What calculator do you want to use? (1 - Mortgage, 2 - Future Value, 3 - Present Value)");
@@ -89,7 +89,7 @@ public class main {
                 System.out.println("Enter your interest rate in decimal form (ex. 1.75% = 0.0175):");
                 double interestRate = scanner.nextDouble();
 
-                System.out.println("Enter how many years");
+                System.out.println("Enter how many years:");
                 double years = scanner.nextDouble();
 
                 //math
