@@ -9,7 +9,7 @@ public class main {
         Scanner scanner = new Scanner(System.in);
         boolean started = false;
         System.out.println("Welcome to Financial Calculator created by: Kenny Lin");
-        System.out.println("What calculator do you want to use? (1 - Mortgage, 2 - Future Value, 3 - Present Value, 4 - )");
+        System.out.println("What calculator do you want to use? (1 - Mortgage, 2 - Future Value, 3 - Present Value, 4 - Hourly->Yearly)");
         System.out.println("Please enter your choice:");
         int command = scanner.nextInt();
         if(command == 1 || command == 2 || command == 3 || command == 4) {
@@ -24,7 +24,7 @@ public class main {
         {
             if(count > 0)
             {
-                System.out.println("What calculator do you want to use? (1 - Mortgage, 2 - Future Value, 3 - Present Value, 4 - )");
+                System.out.println("What calculator do you want to use? (1 - Mortgage, 2 - Future Value, 3 - Present Value, 4 - Hourly->Yearly)");
                 System.out.println("Please enter your choice:");
                 command = scanner.nextInt();
             }
@@ -92,8 +92,8 @@ public class main {
                         System.out.println("Thanks for using our calculator!");
                         break;
                     }
-                }
-                //calculator 3 - Determine present value
+            }
+            //calculator 3 - Determine present value
             else if(command == 3)
             {
                 System.out.println("Welcome to present Value of an Ordinary Calculator");
@@ -127,7 +127,36 @@ public class main {
             }
             else if(command == 4)
             {
+                System.out.println("Welcome to Hourly wage -> Yearly wage Calculator");
+                System.out.println("Enter hourly wage:");
+                double hrWage = scanner.nextDouble();
 
+                System.out.println("Enter average work hours in a week:");
+                int hours = scanner.nextInt();
+
+                System.out.println("Do you work overtime? (1 - Yes, 2 - No");
+                int overTime = scanner.nextInt();
+                int overTimeHrs = 0;
+                double overTimeWage = 0;
+                if(overTime == 1)
+                {
+                    System.out.println("Enter average overtime hours in a week, excluding normal total work hours:");
+                    overTimeHrs = scanner.nextInt();
+                    System.out.println("Enter overtime hourly pay:");
+                    overTimeWage = scanner.nextDouble();
+                }
+                //math
+                double yearlyWage = (52 * (hrWage * hours)) + (52 * (overTimeWage * overTimeHrs));
+                yearlyWage = Math.round(yearlyWage * 100)/100;
+                System.out.println("Your yearly salary is $"+ yearlyWage);
+                System.out.println("Do you want to use our other calculators? (1 - Yes, 2 - No):");
+                int userStart = scanner.nextInt();
+                count++;
+                if(userStart == 2)
+                {
+                    System.out.println("Thanks for using our calculator!");
+                    break;
+                }
             }
         }
         }
