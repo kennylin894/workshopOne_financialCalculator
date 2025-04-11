@@ -1,11 +1,9 @@
 package com.ps;
 
-import java.nio.file.FileAlreadyExistsException;
 import java.util.Scanner;
 
 public class main {
     public static void main(String[] args) {
-        {
         Scanner scanner = new Scanner(System.in);
         boolean started = false;
         System.out.println("Welcome to Financial Calculator created by: Kenny Lin");
@@ -28,7 +26,7 @@ public class main {
                 System.out.println("Please enter your choice:");
                 command = scanner.nextInt();
             }
-            //Mortgage Calculator
+            //Mortgage Calculator 1
             if(command == 1)
             {
                 System.out.println("Welcome to the Mortgage Calculator");
@@ -134,7 +132,7 @@ public class main {
                 System.out.println("Enter average work hours in a week:");
                 int hours = scanner.nextInt();
 
-                System.out.println("Do you work overtime? (1 - Yes, 2 - No");
+                System.out.println("Do you work overtime? (1 - Yes, 2 - No)");
                 int overTime = scanner.nextInt();
                 int overTimeHrs = 0;
                 double overTimeWage = 0;
@@ -158,7 +156,6 @@ public class main {
                     break;
                 }
             }
-        }
         }
     }
 }
