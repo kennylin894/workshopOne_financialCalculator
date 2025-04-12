@@ -6,8 +6,8 @@ A simple financial calculator written in Java. It runs in the console and allows
 
 - 🏡 **Mortgage Payments**
 - 📈 **Future Value of an Investment**
-- 📈 **Present Value (Retirement/Income Planning)**
-- 💼 **Hourly to Yearly Salary Conversion (with optional Overtime)**
+- 📈**Present Value (Retirement Planning)**
+- 💼 **Hourly to Yearly Salary Conversion (Inclu. Overtime)**
 
 ---
 
